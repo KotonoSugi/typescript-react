@@ -1,11 +1,16 @@
 import React from 'react';
+import Counter from './Counter'; //Counterコンポーネントのインポート
 
 interface AppProps{
   message?:string; //ジェネリクス型にする
 }
 
 const App:React.FunctionComponent<AppProps> = ({message}) => { //関数に対してアノテーション
-  return <div>{message}</div>;
+  return (
+    <div>
+      <Counter />
+    </div>
+  );
 };
 
 App.defaultProps = {
