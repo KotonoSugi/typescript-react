@@ -1,5 +1,5 @@
 import React from 'react';
-import Counter from './Counter'; //Counterコンポーネントのインポート
+import CounterWithReducer from './CounterWithReducer'; //Counterコンポーネントのインポート
 
 interface AppProps{
   message?:string; //ジェネリクス型にする
@@ -8,7 +8,7 @@ interface AppProps{
 const App:React.FunctionComponent<AppProps> = ({message}) => { //関数に対してアノテーション
   return (
     <div>
-      <Counter />
+      <CounterWithReducer />
     </div>
   );
 };
