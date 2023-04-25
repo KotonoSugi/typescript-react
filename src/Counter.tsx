@@ -5,6 +5,7 @@ const Counter: React.FC<{}> = () =>{ //FCはFunctionComponentのこと
   const initialValue: any = 0;
   const[value , setValue] =useState<number>(initialValue); //useStateに与える型引数で、valueやsetVallueの型が決まる
 
+  
   const increment = () =>{
     setValue(value +1);
   }
