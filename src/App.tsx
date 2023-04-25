@@ -1,12 +1,15 @@
 import React from 'react';
 
 interface AppProps{
-  message:string;
+  message?:string; //ジェネリクス型にする
 }
 
-const App = ({message} : AppProps) => { //引数を具体的にすることで型制約 & 外側のコンポーネントで存在しないものの定義を防ぐ
-  //const {message} = props; //propsというオブジェクトの中からmessageだけ取り出している
+const App:React.FunctionComponent<AppProps> = ({message}) => { //関数に対してアノテーション
   return <div>{message}</div>;
 };
+
+App.defaultProps = {
+  message: 'Hello,defaltProps!' //デフォルト値の設定
+}
 
 export default App;

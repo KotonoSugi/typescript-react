@@ -6,6 +6,6 @@ import App from './App';
 
 
 //プロップスの追加 Appコンポーネント側にデータを渡した
-ReactDOM.render(<App  message="Hello React!"/>,
+ReactDOM.render(<App />,
  document.getElementById('root')
  );
